@@ -21,8 +21,6 @@ print(r.randint(100,200))
 
 
 # Use the 3rd party tabulate module to print tabulated data:
-from tabulate import tabulate
-
 # Sample data
 data = [
   ["Product", "Price", "Stock"],
@@ -32,4 +30,5 @@ data = [
 ]
 
 # Create a formatted table
-print(tabulate(data, headers="firstrow", tablefmt="fancy_grid"))
+from tabulate import tabulate as tb
+print(tb(data, headers="firstrow", tablefmt="fancy_grid"))
